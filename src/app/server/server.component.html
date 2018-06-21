@@ -1,6 +1,0 @@
-<label>ABC</label>
-<input type="text" [(ngModel)] = "userName"  (keyup)="onStringChange()"> 
-<input type="button" value="SUBMIT" [disabled] = "isNameEmpty" (click) = "resetName()">
-<button type="button" class="btn btn-default" (click)="toggleParagraphText()" >Display Details</button>
-
-<p *ngFor="let text of paraArray; let i=index" [ngClass]="{fifthElement:i>4}">{{text}} {{i}} {{abc}}</p> 
