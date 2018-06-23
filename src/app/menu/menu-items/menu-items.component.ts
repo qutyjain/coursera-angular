@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {item} from "../item.model"
+
 
 @Component({
   selector: 'app-menu-items',
@@ -6,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu-items.component.css']
 })
 export class MenuItemsComponent implements OnInit {
-
+menuItems : item[] = [new item("Vegie Supreme","thin",["tomatoes","Mushrooms"],"../../assets/VeggieSup.jpg"),
+new item("Meat Supreme","regular",["meat","tomatoes"],"../../assets/MeatSup.jpg")
+]
   constructor() { }
 
   ngOnInit() {
