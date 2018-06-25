@@ -11,6 +11,8 @@ import { CartListComponent } from './cart/cart-list/cart-list.component';
 import { CartListEditComponent } from './cart/cart-list-edit/cart-list-edit.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
+import { MenuCategoryComponent } from './menu/menu-category/menu-category.component';
+import { MenuItemDescComponent } from './menu/menu-items/menu-item/menu-item-desc/menu-item-desc.component';
 
 
 
@@ -23,7 +25,9 @@ import { MenuComponent } from './menu/menu.component';
     CartListComponent,
     CartListEditComponent,
     HeaderComponent,
-    MenuComponent
+    MenuComponent,
+    MenuCategoryComponent,
+    MenuItemDescComponent
   ],
   imports: [
     BrowserModule,FormsModule,CommonModule
