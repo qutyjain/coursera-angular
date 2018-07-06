@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,EventEmitter,Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-menu-category',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuCategoryComponent implements OnInit {
   menuCategories: string[] = ["Pizza","Pasta","Sides","Drinks"];
+  @Output() categorySelected = new EventEmitter<string>();
+  selCategory:string ;
   constructor() { }
 
   ngOnInit() {
   }
 
+  selectMenuCategory(event: Event){
+    this.selCategory = event.srcElement.innerHTML;
+    this.categorySelected.emit(this.selCategory);
+  }
 }

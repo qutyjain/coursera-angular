@@ -1,3 +1,3 @@
 export class item {
-    constructor(public category:string,public name:string,public crust:String,public topping:string[],public imagePath:string){}
+    constructor(public itemCategory:string,public itemName:string,public itemCrust:String,public ingredients:string[],public imagePath:string){}
 }

@@ -13,6 +13,7 @@ import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { MenuCategoryComponent } from './menu/menu-category/menu-category.component';
 import { MenuItemDescComponent } from './menu/menu-items/menu-item/menu-item-desc/menu-item-desc.component';
+import { DropdownDirective } from './dropdown.directive';
 
 
 
@@ -27,7 +28,8 @@ import { MenuItemDescComponent } from './menu/menu-items/menu-item/menu-item-des
     HeaderComponent,
     MenuComponent,
     MenuCategoryComponent,
-    MenuItemDescComponent
+    MenuItemDescComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,FormsModule,CommonModule

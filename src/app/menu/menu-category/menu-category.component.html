@@ -1,5 +1,5 @@
 <div class="row" *ngFor = "let category of menuCategories">
   <div class="col-md-2-fluid">
-    <a href="#" class="list-group-item clearfix" >{{category}}</a>
+    <a href="#" class="list-group-item clearfix" (click)= "selectMenuCategory($event)">{{category}}</a>
   </div>
 </div>
