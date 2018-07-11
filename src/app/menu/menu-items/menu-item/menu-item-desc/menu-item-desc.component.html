@@ -1,52 +1,29 @@
-<div  id="accordion" class="row">
-  <div class="col-md-7">
-   
-      <div class="panel-group" id="accordion">
-          <div class="panel panel-default">
+<div class="row">
+  <div class="col-md-7 pull-left">
+ 
+      <div class="panel-group" >
+          <div class="panel panel-primary"  (click)="onClickCollapse($event)">
             <div class="panel-heading">
               <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-               Crust</a>
+                  <p >Crust</p>
               </h4>
             </div>
-            <div id="collapse1" class="panel-collapse collapse in" uib-collapse="true" >
-                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.</div>
-              </div>
-            </div>
-    <div class="panel-group" id="accordion">
-      <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-           Cheese</a>
-            </h4>
-      </div>
-      <div id="collapse1" class="panel-collapse collapse in" >
-          <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.</div>
-        </div>
-    </div>
-    <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-             Toppings</a>
-              </h4>
-        </div>
-        <div id="collapse1" class="panel-collapse collapse in" >
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat.</div>
           </div>
-      </div>
-                  
+          
+            <div class="list-group-item clearfix" [@collapseDiv] ='divState' > 
+              <ul>
+              <li>Thin</li>
+              <li>Regular</li>
+              <li>Cheese Burst</li>
+            </ul>
+          </div>
+        </div>
+      <div class="col-md-4 pull-right">
+
+            <button class="btn btn-primary" (click)="decreaseCount()">-</button>
+            <span>  {{count}}  </span>
+            <button class="btn btn-primary" (click)="increaseCount()">+</button>
+        </div>         
 
   </div>  
 </div>

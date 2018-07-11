@@ -1,6 +1,5 @@
 <app-header (activateFeature)="activatedFeature($event)"></app-header>
 <div class="container-fluid">
-    
     <div class="row">
         <div class="col-md-2" >
             <app-menu-category (categorySelected)="afterCategorySelected($event)" *ngIf="activeScreen === 'Menu'"></app-menu-category>
