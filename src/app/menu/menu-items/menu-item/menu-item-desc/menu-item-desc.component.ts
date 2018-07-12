@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { trigger, style, state, transition, animate } from '@angular/animations';
+import { MenuItemService } from '../../../../shared/menuItem.service';
 
 @Component({
   selector: 'app-menu-item-desc',
@@ -15,16 +16,15 @@ import { trigger, style, state, transition, animate } from '@angular/animations'
 })
 export class MenuItemDescComponent implements OnInit {
 
-  divState:string = 'close';
-  count:number = 0;
-  onClickCollapse(divInfo :string){
+  divState:string;
+  count:number = 0; 
 
-    this.divState = this.divState === 'close' ? 'open' : 'close';
+  constructor(private menuItemService : MenuItemService) { }
+  ngOnInit() {
   }
 
-  constructor() { }
-
-  ngOnInit() {
+  onClickCollapse(){
+    this.divState =  this.menuItemService.toggleItemDesc();
   }
 
   decreaseCount(){

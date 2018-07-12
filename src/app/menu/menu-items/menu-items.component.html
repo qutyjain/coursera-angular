@@ -1,13 +1,7 @@
 
 <div class="row">
     <div class="col-xs-12" >
-        <app-menu-item *ngFor="let menuItem of menuItems" 
-        [singleMenuItem]="menuItem" 
-        [itemCategorySelected]="selectedCategory" 
-        ></app-menu-item>
-    </div>
-</div>
-<br>
+        <app-menu-item *ngFor="let menuItem of menuItems" [singleMenuItem] = 'menuItem'></app-menu-item></div></div>
 <div class="row">
     <div class="col-xs-12">
         <div class="btn-group" appDropdown>

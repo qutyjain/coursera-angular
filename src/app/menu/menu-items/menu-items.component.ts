@@ -1,5 +1,6 @@
 import { Component, OnInit ,Input } from '@angular/core';
 import {item} from "../item.model"
+import { MenuItemService } from '../../shared/menuItem.service';
 
 
 @Component({
@@ -9,12 +10,10 @@ import {item} from "../item.model"
 })
 export class MenuItemsComponent implements OnInit {
   activeScreenInMenu:{feature:string};
-  @Input() selectedCategory : string ;
-menuItems : item[] = [new item("Pizza","Vegie Supreme","thin",["tomatoes","Mushrooms"],"../../assets/VeggieSup.jpg"),
-new item("Pasta","Meat Supreme","regular",["meat","tomatoes"],"../../assets/Pasta.jpg")
-]
-  constructor() { }
-
+  constructor(private menuItemService: MenuItemService ) {
+  }
+  
+  menuItems : item[] = this.menuItemService.items;
   ngOnInit() {
   }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit ,EventEmitter,Output } from '@angular/core';
+import { MenuItemService } from '../../shared/menuItem.service';
 
 
 @Component({
@@ -7,16 +8,14 @@ import { Component, OnInit ,EventEmitter,Output } from '@angular/core';
   styleUrls: ['./menu-category.component.css']
 })
 export class MenuCategoryComponent implements OnInit {
-  menuCategories: string[] = ["Pizza","Pasta","Sides","Drinks"];
-  @Output() categorySelected = new EventEmitter<string>();
-  selCategory:string ;
-  constructor() { }
+  menuCategories =  this.menuItemService.menuCategories;
+  constructor(private menuItemService: MenuItemService){}
 
   ngOnInit() {
   }
 
   selectMenuCategory(event: Event){
-    this.selCategory = event.srcElement.innerHTML;
-    this.categorySelected.emit(this.selCategory);
-  }
+    this.menuItemService.updateMenuCategory(event.srcElement.innerHTML);
+    this.menuItemService.menuCategoryUpdated.emit(event.srcElement.innerHTML);
+    }
 }
