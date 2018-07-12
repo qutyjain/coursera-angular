@@ -8,13 +8,14 @@ import { MenuItemService } from '../../../shared/menuItem.service';
   styleUrls: ['./menu-item.component.css']
 })
 export class MenuItemComponent implements OnInit {
-  
+  itemCategorySelected : string;
   constructor(private menuItemService: MenuItemService) {
     this.menuItemService.menuCategoryUpdated.subscribe((status:string)=> this.itemCategorySelected = status);
    }
   @Input() singleMenuItem: item ;
-  itemCategorySelected = this.menuItemService.selCategory;
+  
   ngOnInit() {
+    this.itemCategorySelected = this.menuItemService.selCategory;
   }
 
   

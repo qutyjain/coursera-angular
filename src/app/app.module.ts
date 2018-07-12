@@ -36,7 +36,7 @@ import { MenuItemService } from './shared/menuItem.service';
   imports: [
     BrowserModule,FormsModule,CommonModule,NgbModule.forRoot(),BrowserAnimationsModule
   ],
-  providers: [MenuItemService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
