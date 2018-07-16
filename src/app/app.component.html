@@ -1,24 +1,6 @@
-<app-header (activateFeature)="activatedFeature($event)"></app-header>
+<app-header></app-header>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-2" >
-            <app-menu-category (categorySelected)="afterCategorySelected($event)" *ngIf="activeScreen === 'Menu'"></app-menu-category>
-                 <!-- > -->
-        </div>
-        <div class="col-md-8">
-            <app-menu-items *ngIf="activeScreen === 'Menu'" ></app-menu-items>
-        </div>
-    </div>
-   
-    <div class="row" >
-        <div class="col-md-12">
-            <app-menu-item-desc *ngIf="activeScreen === 'Deal'"></app-menu-item-desc>
-        </div>
-    </div>
- 
-    <div class="row">
-        <div class="col-md-12">
-            <app-menu-items-edit *ngIf="activeScreen === 'Deal'"></app-menu-items-edit>
-        </div>
-    </div>
-  </div>
+        <router-outlet></router-outlet>
+    </div>  
+</div>

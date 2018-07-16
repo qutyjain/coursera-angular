@@ -1,3 +1,15 @@
-<p>
-  cart-list works!
-</p>
+<div class="row" *ngFor = "let cartItem of cartItems">
+  <div class="col-md-10"  >
+      <a class="list-group-item clearfix" >{{cartItem.itemName}} 
+        <span class="pull-right"> 
+           Qty <input type="number" id="quantity" class="form-control" value="1">
+        </span>
+      </a>
+  </div>
+</div>
+  <hr>
+<div class="row">
+  <div class="col-md-10">
+    <app-cart-list-edit></app-cart-list-edit>
+  </div>
+</div>

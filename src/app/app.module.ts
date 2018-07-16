@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {Routes, RouterModule} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { MenuItemsComponent } from './menu/menu-items/menu-items.component';
@@ -16,7 +17,10 @@ import { MenuComponent } from './menu/menu.component';
 import { MenuCategoryComponent } from './menu/menu-category/menu-category.component';
 import { MenuItemDescComponent } from './menu/menu-items/menu-item/menu-item-desc/menu-item-desc.component';
 import { DropdownDirective } from './shared/dropdown.directive';
-import { MenuItemService } from './shared/menuItem.service';
+import { MenuItemService } from './menu/menuItem.service';
+import { AppRoutingModue } from './app.routing.module';
+
+
 
 @NgModule({
   declarations: [
@@ -34,7 +38,8 @@ import { MenuItemService } from './shared/menuItem.service';
     
   ],
   imports: [
-    BrowserModule,FormsModule,CommonModule,NgbModule.forRoot(),BrowserAnimationsModule
+    BrowserModule,FormsModule,CommonModule,NgbModule,BrowserAnimationsModule,
+    AppRoutingModue
   ],
   providers: [],
   bootstrap: [AppComponent]

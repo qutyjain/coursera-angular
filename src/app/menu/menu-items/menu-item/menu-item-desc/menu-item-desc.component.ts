@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { trigger, style, state, transition, animate } from '@angular/animations';
-import { MenuItemService } from '../../../../shared/menuItem.service';
+import { MenuItemService } from '../../../menuItem.service';
+
 
 @Component({
   selector: 'app-menu-item-desc',

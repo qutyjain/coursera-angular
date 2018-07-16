@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {item} from "../item.model"
-import { MenuItemService } from '../../shared/menuItem.service';
+import { MenuItemService } from '../menuItem.service';
 
 
 @Component({
@@ -9,12 +9,12 @@ import { MenuItemService } from '../../shared/menuItem.service';
   styleUrls: ['./menu-items.component.css']
 })
 export class MenuItemsComponent implements OnInit {
-  activeScreenInMenu:{feature:string};
+  menuItems : item[];
   constructor(private menuItemService: MenuItemService ) {
   }
   
-  menuItems : item[] = this.menuItemService.items;
   ngOnInit() {
+    this.menuItems = this.menuItemService.getItems();
   }
 
 }

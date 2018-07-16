@@ -11,10 +11,4 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
-    
-  @Output() activateFeature = new EventEmitter<string>();
-    
-  activeScreen(feature:string){
-   this.activateFeature.emit(feature);
-}
 }

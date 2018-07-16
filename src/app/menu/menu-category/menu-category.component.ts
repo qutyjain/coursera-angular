@@ -1,5 +1,5 @@
 import { Component, OnInit ,EventEmitter } from '@angular/core';
-import { MenuItemService } from '../../shared/menuItem.service';
+import { MenuItemService } from '../menuItem.service';
 
 
 @Component({
