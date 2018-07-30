@@ -12,12 +12,19 @@ import { Subscription } from 'rxjs';
 })
 export class MenuItemsComponent implements OnInit,OnDestroy {
   menuItems : item[];
+  categorySelected:string;
+
   constructor(private menuItemService: MenuItemService,private router: Router, private route:ActivatedRoute ) {
+    this.categorySelected =this.menuItemService.selCategory;
     this.menuItemService.itemsUpdated.subscribe(
       (items:item[])=>{
         this.menuItems = items;
       }
-    )
+    );
+    this.menuItemService.menuCategoryUpdated.subscribe( (category:string )=> {
+      this.categorySelected =this.menuItemService.selCategory;
+    }
+    );
   }
   
   ngOnInit() {

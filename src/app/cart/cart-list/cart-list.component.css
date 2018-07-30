@@ -1,0 +1,20 @@
+div{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 110%;
+  }
+  
+  .help-block{
+   font-family: cursive;
+  }
+  
+  span{
+    color:green;
+  }
+
+  .list-group-text{
+    font-size: 100%;
+  }
+
+  .list-group-heading{
+    font-size: 120%;
+  }

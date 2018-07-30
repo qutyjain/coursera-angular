@@ -3,7 +3,7 @@
 
   <a class="list-group-item clearfix" routerLink="/cart" (click)="populateSelectedItem(cartItem)">
     <div class="col-md-10"  >
-      <p>{{cartItem.item.itemName}} </p> {{cartItem.property}}
+      <p class="list-group-heading">{{cartItem.item.itemName}}&nbsp;{{cartItem.item.itemCategory}} </p><p class="list-group-text"> {{cartItem.property}}</p>
     </div>
     <div class="col-md-2 form-group">
       <label for="sel1">Qty :</label>

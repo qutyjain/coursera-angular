@@ -16,8 +16,8 @@
       <div class="col-md-2 form-group" ngModelGroup="ingredients" >
           <label for="ingredient">Type</label>
           <br>
-          <label><input type="radio" name="ingredient" value="Vegeterian" ngModel required>Vegeterian</label>
-          <label><input type="radio" name="ingredient" value="Non-Vegeterian" ngModel required>Non-Vegeterian</label>
+          <label><input type="radio" name="ingredient" value="Vegeterian" ngModel #ingredient="ngModel" required>Vegeterian</label>
+          <label><input type="radio" name="ingredient" value="Non-Vegeterian" ngModel #ingredient="ngModel" required>Non-Vegeterian</label>
       </div>
     </div>
   <div class="row">
@@ -41,7 +41,7 @@
         <span class="help-block" *ngIf="propControlInvalid && property.touched">URL Value Required!!</span>
       </div>
   </div>
-  
+  <!-- <span class="help-block" *ngIf="!ingredient.touched||!f.valid" style="color:blue;">Some values are missing!!</span> -->
   <hr>
     <div class="row">
         <div class="col-xs-12 form-group">
@@ -50,6 +50,7 @@
           <button type="button" class="btn btn-primary" (click)="clearItem()">Clear</button>
         </div>
     </div>
+   
   </form>
   </div>
 </div>

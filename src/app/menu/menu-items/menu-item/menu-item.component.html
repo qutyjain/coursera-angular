@@ -4,13 +4,13 @@
        <div class="col-md-8">
            <div class="row">
                 <div class="col-md-12" >
-               <span> <h4 class="list-group-item-heading">  {{singleMenuItem.itemName}} </h4><h6 [ngStyle]="{'color':singleMenuItem.ingredients === 'Vegeterian' ? 'green' : 'red' }" >{{singleMenuItem.ingredients}} </h6></span>
+               <span> <h4 class="list-group-item-heading">  {{singleMenuItem.itemName}} </h4><p class="list-group-item-text" [ngStyle]="{'color':singleMenuItem.ingredients === 'Vegeterian' ? 'green' : 'red' }" >{{singleMenuItem.ingredients}} </p></span>
            </div>
             </div>
           <br>
            <div class="row">
                 <div class="col-md-12" >
-                <p class="list-group-item-text"><b>{{singleMenuItem.itemProperty.customProperty}} available</b></p>
+                        <span><h4 class="list-group-item-heading"><b>{{singleMenuItem.itemProperty.customProperty}} available</b></h4></span>
                 <p class="list-group-item-text">{{singleMenuItem.itemProperty.value}}</p>
             </div>
             </div>
