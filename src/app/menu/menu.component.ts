@@ -1,11 +1,20 @@
-import { Component, ViewChild, ElementRef ,EventEmitter,Output} from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
-    selector:'app-menu-component',
-    templateUrl:'./menu.component.html',
-    styleUrls: ["./menu.component.css"]
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.css']
 })
-export class MenuComponent {
+export class MenuComponent implements OnInit {
+ 
+  constructor() {
+  }
+  
+  ngOnInit() {
+   
+  }
+
+  
 
 }

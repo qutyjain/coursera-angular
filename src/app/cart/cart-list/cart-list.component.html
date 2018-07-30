@@ -1,15 +1,22 @@
-<div class="row" *ngFor = "let cartItem of cartItems">
-  <div class="col-md-10"  >
-      <a class="list-group-item clearfix" >{{cartItem.itemName}} 
-        <span class="pull-right"> 
-           Qty <input type="number" id="quantity" class="form-control" value="1">
-        </span>
-      </a>
-  </div>
+<form FormGroup="">
+<div class="row-md-10"  *ngFor = "let cartItem of cartItems;let i = index;" routerLinkActive='active' style="margin-left:5px;margin-right:10px;">
+
+  <a class="list-group-item clearfix" routerLink="/cart" (click)="populateSelectedItem(cartItem)">
+    <div class="col-md-10"  >
+      <p>{{cartItem.item.itemName}} </p> {{cartItem.property}}
+    </div>
+    <div class="col-md-2 form-group">
+      <label for="sel1">Qty :</label>
+        <select class="form-control" id="sel1" #e (change)="onQtyChange(cartItem ,$event)">
+          <option id="quantity" [selected] ="cartItem.count===number" *ngFor="let number of numberRange">{{number}}</option>
+        </select>
+    </div>
+  </a>
 </div>
   <hr>
 <div class="row">
   <div class="col-md-10">
     <app-cart-list-edit></app-cart-list-edit>
   </div>
-</div>
+</div> 
+</form> 

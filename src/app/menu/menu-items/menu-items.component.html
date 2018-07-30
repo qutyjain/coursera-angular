@@ -1,9 +1,5 @@
-
 <div class="row">
-    <div class="col-md-2" >
-        <app-menu-category></app-menu-category>
-    </div>
-    <div class="col-xs-8" >
+       <div class="col-xs-8" >
         <app-menu-item *ngFor="let menuItem of menuItems" [singleMenuItem] = 'menuItem'></app-menu-item>
     </div>
 </div>
@@ -11,15 +7,15 @@
 <div class="row" >
     <div class="col-xs-10" >
         <div class="btn-group" appDropdown>
-            <button class="btn btn-success dropdown-toggle" >
+            <button class="btn btn-success dropdown-toggle"  (click)="addNewDish()" >
                 Add new dish <span class="caret"></span>
             </button>
-            <ul class="dropdown-menu">
-                <li><a href="#">To Pizzas</a></li>
-                <li><a href="#">To Pastas</a></li>
-                <li><a href="#">To Sides</a></li>
-                <li><a href="#">To Drinks</a></li>
-            </ul>
+            <!-- <ul class="dropdown-menu">
+                <li><a routerLink="edit" (click)="addNewDish()" >To Pizzas</a></li>
+                <li><a routerLink="/">To Pastas</a></li>
+                <li><a routerLink="/">To Sides</a></li>
+                <li><a routerLink="/">To Drinks</a></li>
+            </ul> -->
         </div>
     </div>
 </div>

@@ -1,0 +1,39 @@
+<div class="row"style="margin-left:10px;" >
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm" >
+  <div class="col-md-7 pull-left">
+    <div class="row">
+      <div class="col-md-12">
+          <h2>Customize Your {{selectedItem.itemCategory}}&nbsp;<span class="label label-default">{{selectedItem.itemName}}</span></h2>
+          <span class="help-block" *ngIf="!f.valid">Please select a {{selectedItem.itemProperty.customProperty}} of your choice</span>
+        </div>
+    </div>
+      <div class="row">
+        <div class="panel-group" >
+          <div class="panel panel-success"  (click)="onClickCollapse($event)">
+            <div class="panel-heading" style="cursor:pointer;">
+              <h4 class="panel-title">
+                  <p >{{selectedItem.itemProperty.customProperty}}</p>
+              </h4>
+            </div>
+          </div>
+       <div class="list-group-item clearfix form-group" [@collapseDiv] ='divState' ngModelGroup="property"> 
+        <div class="row"  *ngFor ="let val of selectedItem.itemProperty.value;" style="margin-left:5px;">
+            <label ><input type="radio" name="value" [value]="val" #value="ngModel" ngModel required>{{val}}</label>
+        </div>
+    </div>
+  </div>
+  </div>
+  <div class="row">
+   <div class="col-md-12">
+     
+      <button type="submit" class="btn btn-success" style="display: table;margin: 0 auto" [disabled]="!f.valid">Add To Cart</button>
+    </div>
+  </div> 
+  </div>
+    <div class="col-md-5 content" >
+      <button type="button" class="btn btn-success" (click)="decreaseCount()">-</button><span>  {{count}}  </span>
+        <button type="button" class="btn btn-success" (click)="increaseCount()">+</button>
+    </div>
+  </form> 
+</div>     
+

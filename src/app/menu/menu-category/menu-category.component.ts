@@ -16,6 +16,6 @@ export class MenuCategoryComponent implements OnInit {
 
   selectMenuCategory(event: Event){
     this.menuItemService.updateMenuCategory(event.srcElement.innerHTML);
-    this.menuItemService.menuCategoryUpdated.emit(event.srcElement.innerHTML);
+    this.menuItemService.menuCategoryUpdated.next(event.srcElement.innerHTML);
     }
 }
